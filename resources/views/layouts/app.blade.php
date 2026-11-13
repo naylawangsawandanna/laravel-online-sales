@@ -25,7 +25,7 @@
         @if(auth()->user()->role === 'customer') 
  
             <a href="{{ route('cart.index') }}">Keranjang</a> 
-            <a href="{{ route('orders.index') }}">Pesanan</a> 
+            {{-- <a href="{{ route('orders.index') }}">Pesanan</a> --}} 
         @else 
  
             <a href="{{ route('admin.dashboard') }}">Admin</a> 
