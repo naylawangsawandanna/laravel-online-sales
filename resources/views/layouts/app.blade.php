@@ -18,9 +18,9 @@ href="{{ route('shop.index') }}" @if(request()->routeIs('shop.*')) aria-current=
 @if(request()->routeIs('cart.*')) aria-current="page" @endif>Keranjang ({{ array_sum(session('cart',[])) }})</a>@endif
 @if(Route::has('orders.index'))
 <a href="{{ route('orders.index') }}" @if(request()->routeIs('orders.*')) aria-current="page" @endif>Pesanan</a>@endif
-@else<a href="{{ route('admin.dashboard') }}">Dashboard Admin</a>@endif<span class="account">Halo, {{ auth()->user()->name }}</span><form method="POST" action="{{ route('logout') }}">@csrf<button class="btn￾light">Keluar</button></form>@else<a href="{{ route('login') }}">Masuk</a><a class="btn" href="{{ route('register') 
+@else<a href="{{ route('admin.dashboard') }}">Dashboard Admin</a>@endif<span class="account">Halo, {{ auth()->user()->name }}</span><form method="POST" action="{{ route('logout') }}">@csrf<button class="btn-light">Keluar</button></form>@else<a href="{{ route('login') }}">Masuk</a><a class="btn" href="{{ route('register') 
 }}">Daftar</a>@endauth</nav></header>
-<main class="container">@include('layouts.flash')@yield('content')</main>
+<main class="container">{{--@include('layouts.flash')--}}@yield('content')</main>
 <footer class="container footer"><strong>ruangbelanja.</strong>
 <span>Proyek praktikum Laravel · Admin & Pelanggan</span>
 <span>Belanja dengan informasi yang jelas.</span></footer>
