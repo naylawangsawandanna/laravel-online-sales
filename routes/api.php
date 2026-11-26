@@ -23,6 +23,7 @@ Route::prefix('v1')->group(function () {
             Route::post('/checkout', [CheckoutController::class, 'store']); 
             Route::get('/orders', [CustomerOrderController::class, 'index']); 
             Route::get('/orders/{order}', [CustomerOrderController::class, 'show']); 
+            Route::patch('/orders/{order}/cancel', [CustomerOrderController::class, 'cancel']);
         }); 
  
         Route::prefix('admin')->middleware('role:admin')->group(function () { 
